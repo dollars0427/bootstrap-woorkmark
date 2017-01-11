@@ -18,9 +18,15 @@
   <?php if (!empty($title)) : ?>
     <h3><?php print $title; ?></h3>
   <?php endif; ?>
-  <ul class="active-wookmark">
+  <ul class="active-wookmark" style="position: relative">
     <?php foreach ($rows as $id => $item): ?>
-      <li><?php print $item; ?></li>
+      <li>
+      <div class="panel panel-default card">
+        <div class="panel-body">
+          <?php print $item;?>
+        </div>
+      </div>
+    </li>
     <?php endforeach; ?>
   </ul>
 </div>
