@@ -1,8 +1,13 @@
 <?php
+
 /**
  * Implements hook_views_api().
  */
 function bootstrap_wookmark_views_api() {
+    if (($library = libraries_load('wookmark')) && !empty($library['loaded'])) {
+      drupal_add_js(drupal_get_path('module', 'bootstrap_wookmark') . '/js/active.js');
+    }
+
   return array(
     'api' => '3'
   );

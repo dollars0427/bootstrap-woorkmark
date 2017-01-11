@@ -7,4 +7,3 @@ dependencies[] = views
 dependencies[] = libraries
 
 files[] = bootstrap_wookmark.views.inc
-scripts[] = js/active-wookmark.js
