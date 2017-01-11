@@ -1,0 +1,8 @@
+name = Bootstrap Woorkmark
+description = Enable pinterest likes with bootstrap layout on site.
+core = 7.x
+package = Views
+dependencies[] = views
+dependencies[] = libraries
+files[] = wookmark.views.inc
+scripts[] = js/views.js

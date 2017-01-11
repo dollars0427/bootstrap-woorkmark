@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Implements hook_requirements().
+ */
+function bootstrap_wookmark_requirements($phase) {
+  $requirements = array();
+  switch ($phase) {
+
+    case 'runtime':
+      $library = libraries_detect('wookmark');
+      $requirements['wookmark'] = array(
+        'title' => $t('Wookmark Jquery Plugin'),
+        'value' => $library['installed'] ? $t('Installed') : $t('Not installed'),
+        'description' => isset($library['error message']) ? $library['error message'] : '',
+        'severity' => $library['installed'] ? REQUIREMENT_OK : REQUIREMENT_ERROR,
+      );
+      break;
+  }
+  return $requirements;
+}
