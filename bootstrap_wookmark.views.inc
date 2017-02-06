@@ -17,7 +17,7 @@ function bootstrap_wookmark_views_plugins() {
        'uses grouping' => TRUE,
        'uses options' => TRUE,
        'type' => 'normal',
-       'even empty' => TRUE,
+       'even empty' => FALSE,
      ),
    ),
  );

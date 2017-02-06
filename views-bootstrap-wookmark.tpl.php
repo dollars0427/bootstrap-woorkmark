@@ -14,6 +14,7 @@
  * @ingroup views_templates
  */
 ?>
+<?php if (!empty($rows)): ?>
 <div>
   <?php if (!empty($title)) : ?>
     <h3><?php print $title; ?></h3>
@@ -30,3 +31,4 @@
     <?php endforeach; ?>
   </ul>
 </div>
+<?php endif; ?>
